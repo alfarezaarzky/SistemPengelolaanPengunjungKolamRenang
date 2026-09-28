@@ -62,6 +62,26 @@ Class ini digunakan untuk menyimpan informasi mengenai jenis dan harga tiket yan
 
 Inheritance diterapkan pada class `Member` melalui `extends Pengunjung`, sehingga `Member` dapat mewarisi atribut dan method dari class `Pengunjung`. Constructor `super(nama, umur)` digunakan untuk memanggil constructor parent class, sedangkan `idMember` menjadi atribut tambahan pada `Member`. Method `hitungBiaya()` dan `tampilkanInfo()` menggunakan `@Override` untuk memberikan implementasi khusus bagi member, seperti mendapatkan diskon **20% dari harga tiket**.
 
+## Polimorphism 
+
+<img width="753" height="383" alt="image" src="https://github.com/user-attachments/assets/353aa43c-3f79-4b25-973a-4e786f754d3f" />
+
+Polymorphism diterapkan melalui method hitungBiaya() dan tampilkanInfo() yang menggunakan @Override pada class Member. Method tersebut mengubah implementasi dari class Pengunjung sehingga Member memiliki perilaku khusus, yaitu mendapatkan diskon 20% dari harga tiket dan menampilkan informasi tambahan seperti ID member. Dengan demikian, method yang sama dapat menghasilkan perilaku yang berbeda sesuai dengan objek yang digunakan.
+
+## Condition 
+
+<img width="576" height="582" alt="image" src="https://github.com/user-attachments/assets/c6b91211-b2ee-46b9-b010-f029a44782fa" />
+
+Condition diterapkan pada bagian if (daftarPengunjung.isEmpty()) untuk memeriksa apakah daftar pengunjung masih kosong. Jika kondisi bernilai true, program menampilkan pesan “Belum ada data pengunjung.”. Jika kondisi bernilai false, program menjalankan blok else dan menampilkan seluruh data pengunjung menggunakan perulangan for. Dengan demikian, condition digunakan untuk menentukan proses yang dijalankan berdasarkan kondisi data pengunjung.
+
+## Perulangan
+
+<img width="735" height="420" alt="image" src="https://github.com/user-attachments/assets/40cd0854-8958-4b75-b66b-b8d245645060" />
+
+<img width="338" height="150" alt="image" src="https://github.com/user-attachments/assets/d6735f52-a920-4a0b-86a9-a5640f8fbcc3" />
+
+Perulangan diterapkan menggunakan blok `do-while` untuk menampilkan menu interaktif **Sistem Pengelolaan Pengunjung Kolam Renang** dan memproses input pengguna secara berulang. Blok kode di dalam `do` akan mengeksekusi tampilan menu pilihan (seperti **1. Tambah Pengunjung Umum** hingga **6. Keluar**), menerima input angka `pilihan` dari pengguna, dan mengeksekusi percabangan `switch (pilihan)` minimal satu kali. Kondisi `while (pilihan != 6)` memastikan bahwa program akan terus mengulang penampilkan menu selama pengguna tidak memilih menu **6 (Keluar)**. Setelah pengguna memilih opsi **6**, perulangan akan dihentikan dan objek *scanner* ditutup dengan `input.close()`.
+
 ## Fitur Program
 
 Program Sistem Pengelolaan Pengunjung Kolam Renang memiliki beberapa fitur utama, yaitu:
